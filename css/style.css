@@ -1,0 +1,94 @@
+body {
+    font-family: monospace;
+    background-color: #DDDDDD;
+    color: #070707;
+}
+.container-style {
+    margin-left: 30px;
+    text-align: center;
+}
+.text-style {
+    text-align: justify;
+}
+.div-list {
+    list-style-type: none;
+}
+a:link{
+    color: black;
+}
+a:visited {
+    color: dimgray;
+}
+a:hover {
+    color: seagreen;
+}
+a:active {
+    color: blueviolet;
+}
+.card-h {
+    background-color: cadetblue;
+    margin-bottom: 20px;
+}
+.card-set {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card-set .card {
+    border-radius: 40px;
+    border-width: 3px;
+    border-color: cadetblue;
+}
+.card-set .card-title {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid cadetblue;
+}
+.nav-item {
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;
+    margin-right: 30px;
+}
+.nav-a {
+    text-decoration: underline dashed;
+}
+.custom-navbar {
+    background-color: #57BEC4;
+}
+.img-1 {
+    position: relative;
+    background: url("../image/amplypygid.jpg") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 3px solid transparent; /* Add transparent border */
+}
+
+.img-overlay {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 2% 4%;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+
+
+.nav-logo {
+    background: url("../image/pt.png") no-repeat left center;
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}

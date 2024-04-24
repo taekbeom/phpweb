@@ -30,6 +30,26 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="h-start">
+                        Hello, fellow user <?php echo ($_COOKIE['User']); ?>
+                    </h1>
+                </div>
+                <div class="col-12">
+                    <form method="POST" action="profile.php">
+                        <div class="row mt-2">
+                            <input class="form" type="text" name="title" placeholder="title">
+                        </div>
+                        <div class="row mt-2">
+                            <textarea name="text" cols="30" rows="10" placeholder="post content"></textarea>
+                        </div>
+                        <button type="submit" class="btn-reg mt-4" name="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="container container-style mt-3">
             <div class="row">
                 <div class="col-12">
@@ -97,3 +117,19 @@
     </body>
     <script type="text/javascript" src="js/button.js"></script>
 </html>
+<?php
+    require_once('db.php');
+    
+    $link = mysqli_connect('127.0.0.1', 'root', 'eve@123', 'sqldb');
+
+    if (isset($_POST['submit'])) {
+        $title = $_POST['title'];
+        $body = $_POST['text'];
+
+        if (!$title || !$body) die ('Some fields are empty, think again');
+    
+        $sql = "INSERT INTO post (title, body) VALUES ('$title', '$body')";
+        
+        if (!mysqli_query($link, $sql)) die ("Post cannot be added");
+    }
+?>
